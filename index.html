@@ -127,6 +127,32 @@ button {
         opacity: 0;
     }
 }
+
+.celebration-img {
+    width: 260px;
+    max-width: 70vw;
+    margin: 30px 0;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(183,106,140,0.35);
+    animation: floatImg 3s ease-in-out infinite;
+}
+
+@keyframes floatImg {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+.sweet-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #7b4f63;
+    letter-spacing: 0.4px;
+    margin-top: 20px;
+    text-shadow: 0 8px 20px rgba(183,106,140,0.25);
+}
+
 </style>
 </head>
 
@@ -134,13 +160,15 @@ button {
 
 <div class="container" id="main">
     <h1 id="question">Will you be my Valentine? ♡</h1>
-    <button id="yesBtn">Yes, of course ♡</button>
-    <button id="noBtn">No</button>
+    <button id="yesBtn">Yes, of course🌹</button>
+    <button id="noBtn">No 😔</button>
 </div>
 
 <div class="celebration" id="celebration">
-    <h1>Yay ♡</h1>
-    <p>You just made my heart very happy.</p>
+    <h1>Yeayyy Timaaci Yakk 💖</h1>
+    <p class="sweet-text">You just made my heart very happy, Py Valentine's Day!!</p>
+    <img src="./lany.png" class="celebration-img">
+
     <div class="hearts" id="hearts"></div>
 </div>
 
@@ -199,7 +227,7 @@ function createHearts() {
     setInterval(() => {
         const heart = document.createElement("div");
         heart.className = "heart";
-        heart.innerHTML = Math.random() > 0.5 ? "♡" : "✿";
+        heart.innerHTML = Math.random() > 0.5 ? "💐" : "💌";
         heart.style.left = Math.random() * 100 + "vw";
         heart.style.animationDuration = (Math.random() * 3 + 4) + "s";
         hearts.appendChild(heart);
